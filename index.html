@@ -5,13 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/171cb60d9f.js" crossorigin="anonymous"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,200&display=swap" rel="stylesheet">  
     <link href="style.css" rel="stylesheet">
-    <title>Natália</title>
+        <title>Mª Natália</title>
 </head>
 <body>
     <header>
         <div>
-            <img src="" alt="Logo Mª_Natalia">
+            <img src="./img/logo_size - Copia (1).jpg" alt="Logo Mª_Natalia">
         </div>
         <ul>
             <li>
@@ -31,10 +34,10 @@
                 <h1>Mª Natália</h1>
                 <h5>Front-End Developer</h5>
             </div>
-            <div id="arrow">
-                <i class="fa-solid fa-sort-down"></i>
+            <div onclick="displayAbout()" id="arrow">
+                <i id="animation" class="fa-solid fa-sort-down"></i>
             </div>
-            <div id="about">
+            <div style="display: none;" id="about">
                 <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. 
                     Repellat adipisci expedita consequuntur ab, excepturi, 
@@ -56,5 +59,13 @@
         
         </section>
     </main>
+    <script>
+        function displayAbout(){
+            var arrow = document.getElementById('animation');
+            arrow.classList.toggle('rotate');
+            var display = document.getElementById('about');
+            display.classList.toggle('active');
+        }
+    </script>
 </body>
 </html>
